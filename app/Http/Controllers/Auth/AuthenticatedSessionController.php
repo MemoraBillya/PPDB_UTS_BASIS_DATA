@@ -26,9 +26,18 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
 
+        // Regenerate the session to prevent session fixation
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        // Get the authenticated user
+        $user = Auth::user(); 
+
+        // Check the user's role and redirect accordingly
+        if ($user->isAdmin()) {
+            return redirect()->route('admin.dashboard'); // route admin
+        } else {
+            return redirect()->route('dashboard'); // route user
+        }
     }
 
     /**
@@ -38,8 +47,10 @@ class AuthenticatedSessionController extends Controller
     {
         Auth::guard('web')->logout();
 
+        // Invalidate the session
         $request->session()->invalidate();
 
+        // Regenerate the CSRF token
         $request->session()->regenerateToken();
 
         return redirect('/');

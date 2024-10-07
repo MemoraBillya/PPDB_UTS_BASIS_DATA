@@ -1,7 +1,7 @@
 <x-app-layout>
     <head>
         <meta charset="utf-8">
-        <title>Stocker - Stock Market Website Template</title>
+        <title>PPDB GACORRRR</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -111,8 +111,8 @@
         <div class="container-fluid service pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Layanan Kami</h4>
-                    <h1 class="display-5 mb-4">Jelajahi Layanan PPDB Surabaya 2024</h1>
+                    <h4 class="text-primary">Pusat Informasi</h4>
+                    <h1 class="display-5 mb-4">Pelajari Semua Tentang PPDB Surabaya!</h1>
                     <p class="mb-0">Pelajari lebih lanjut mengenai prosedur, jadwal, dan pendaftaran PPDB Surabaya 2024 melalui halaman-halaman berikut.</p>
                 </div>
                 <div class="row g-4">
@@ -206,7 +206,6 @@
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
                             </div>
                         </div>
                     </div>

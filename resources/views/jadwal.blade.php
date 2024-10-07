@@ -39,7 +39,7 @@
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6 text-gray-900">
-                            <h3 class="text-lg font-semibold mb-4 text-primary">Jadwal Kegiatan PPDB 2024</h3>
+                            <h3 class="text-xl font-semibold">Jadwal Kegiatan PPDB 2024</h3>
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered">
                                     <thead class="bg-primary text-white">

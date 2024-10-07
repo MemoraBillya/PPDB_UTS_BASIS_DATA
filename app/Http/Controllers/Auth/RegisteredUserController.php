@@ -27,24 +27,31 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request): RedirectResponse
-    {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        event(new Registered($user));
-
-        Auth::login($user);
-
-        return redirect(route('dashboard', absolute: false));
-    }
+    
+     public function store(Request $request)
+     {
+         $request->validate([
+             'name' => 'required|string|max:255',
+             'email' => 'required|string|email|max:255|unique:users',
+             'password' => 'required|string|min:8|confirmed',
+             // Tidak lagi memvalidasi role karena kita akan memberikan default
+         ]);
+     
+         // Tentukan role default
+         $role = $request->role ?? 'user'; // Jika tidak ada role yang diberikan, default ke 'user'
+     
+         $user = User::create([
+             'name' => $request->name,
+             'email' => $request->email,
+             'password' => Hash::make($request->password),
+             'role' => $role, // Simpan role pengguna
+         ]);
+     
+         if ($user->isAdmin()) {
+            return redirect()->route('admin'); // route admin
+        } else {
+            return redirect()->route('dashboard'); // route user
+        }
+        
+     }
 }
