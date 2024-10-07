@@ -49,3 +49,52 @@
     </div>
 </div>
 @endsection
+
+<style>
+    h1{
+        margin-bottom: 40px;
+        margin top: 0px;
+        font-size: 38px;
+        font-weight: bold;
+        color: black;
+    }
+    .card-custom {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 300px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-custom:hover {
+        transform: scale(1.05);
+    }
+    .bg-info {
+        background-color: #17a2b8 !important;
+        height: 200px;
+    }
+    .bg-success {
+        background-color: #28a745 !important;
+        height: 200px;
+    }
+    .bg-warning {
+        background-color: #ffc107 !important;
+        height: 200px;
+    }
+    .bg-light {
+        background-color: #f8f9fa !important;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+</style>

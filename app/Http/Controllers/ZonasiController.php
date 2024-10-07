@@ -90,7 +90,7 @@ class ZonasiController extends Controller
                         'id_sekolah' => $id_sekolah,
                     ]);
 
-                    // Mark this student as accepted
+                    // Siswa accepted
                     $acceptedStudents[$pendaftaran->id_pendaftaran] = $id_sekolah;
                 }
             }
